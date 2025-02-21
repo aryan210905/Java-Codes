@@ -1,6 +1,6 @@
 package Exp_1;
 import java.util.Scanner;
-public class Fourth {
+public class Dimensions {
     public int square(int n){
         return n*n;
     }

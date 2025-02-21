@@ -1,6 +1,6 @@
 package Exp_1;
 import java.util.Scanner;
-public class Fifth {
+public class Max3Nos {
     public static void func(int a, int b, int c) {
         if(a>b && a>c){     // a is max
             if(b>c){        // b is second max

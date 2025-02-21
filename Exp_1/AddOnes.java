@@ -1,6 +1,6 @@
 package Exp_1;
 import java.util.Scanner;
-public class Eighth {
+public class AddOnes {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");

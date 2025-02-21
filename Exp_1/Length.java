@@ -1,6 +1,6 @@
 package Exp_1;
 import java.util.Scanner;
-public class Third {
+public class Length {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter length in meters: ");

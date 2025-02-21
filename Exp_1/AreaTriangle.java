@@ -1,7 +1,7 @@
 package Exp_1;
 import java.util.Scanner;
 import java.lang.Math;
-public class Ninth{
+public class AreaTriangle{
     public static double areaTriangle(float a, float b, float c){
         float s = (a+b+c)/2;
         double areaSquared = s*(s-a)*(s-b)*(s-c);

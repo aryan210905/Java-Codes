@@ -1,6 +1,6 @@
 package Exp_1;
 import java.util.Scanner;
-public class Second {
+public class Equations {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         float a,b,c,d,e,f,x,y;
