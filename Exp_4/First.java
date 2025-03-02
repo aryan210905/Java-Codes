@@ -1,29 +1,26 @@
 public class First {
-    public static void checkPalindrome(String s){
-        String s2 = "";
+    public static void checkPalindrome(String s) {
+        String reversed = "";
         int n = s.length();
-        for(int i=n-1;i>=0;i--){
-            s2 += s.charAt(i);
-        }
-        if(s2 == s){
-            System.out.println(s+" is a palindrome");
-        }
-        else{
-            System.out.println(s+" is not a palindrome");
+        
+        for (int i = n - 1; i >= 0; i--) {
+            reversed += s.charAt(i);
         }
 
+        if (s.equals(reversed)) {
+            System.out.println(s + " is a palindrome");
+        } else {
+            System.out.println(s + " is not a palindrome");
+        }
     }
+
     public static void main(String[] args) {
-        String s1 = args[0];
-        String s2 = args[1];
-        String s3 = args[2];
-        String s4 = args[3];
-        String s5 = args[4];
-        checkPalindrome(s1);
-        checkPalindrome(s2);
-        checkPalindrome(s3);
-        checkPalindrome(s4);
-        checkPalindrome(s5);
+        if (args.length < 5) {
+            System.out.println("Please provide at least 5 arguments.");
+            return;
+        }
+        for (int i = 0; i < 5; i++) {
+            checkPalindrome(args[i]);
+        }
     }
 }
-
