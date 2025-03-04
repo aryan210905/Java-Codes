@@ -18,6 +18,10 @@ public class Time {
         Time T3 = new Time();
         T3.hours = T1.hours + T2.hours;
         T3.minutes = T1.minutes + T2.minutes;
+        if(T3.minutes>60){
+            T3.hours += T3.minutes/60;
+            T3.minutes %= 60;
+        }
         return T3;
     }
 
