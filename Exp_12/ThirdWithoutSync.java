@@ -9,12 +9,12 @@ class Count{
     }
 }
 class NewThread extends Thread{
-    Count c = new Count();
+    Count c;
     NewThread(Count c){
         this.c = c;
     }
     public void run(){
-        for(int i=1;i<=100;i++)    c.increment();
+        for(int i=1;i<=1000;i++)    c.increment();
     }
 }
 public class ThirdWithoutSync {
