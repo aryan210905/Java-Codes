@@ -316,6 +316,64 @@ main()
 
 
 
+9.1
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <unistd.h>
+// #include <linux/unistd.h>
+// #include <linux/dirent.h>
+
+main(int argc,char *argv[])
+{
+     DIR *dirname;
+     struct dirent *dir;
+     
+     dirname = opendir(argv[1]);
+     while((dir = readdir(dirname)) != NULL)    
+       {  
+          if(strcmp(dir->d_name,".") == 0  || strcmp(dir->d_name,"..")==0)
+               continue;
+
+          printf("%-10s",dir->d_name);  
+        }
+      printf("\n");    
+}
+
+
+
+9.2
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <utmp.h>
+#define UTMP "/var/run/utmp"
+int main (int argc, char *argv[])
+{
+    FILE *fp;
+    struct utmp u;
+    for(;;)
+    { 
+          fp = fopen(UTMP,"r");
+          while(!feof(fp))
+          {
+                fread(&u, sizeof(u), 1,fp);
+                if(u.ut_name == NULL)
+                       continue;
+                if(strcmp(argv[1], u.ut_name)==0)
+                  {
+                       printf("\n \7 \7 \7 \7 %s has login\n", argv[1]);
+                       exit(0);  
+                  }
+          } 
+         fclose(fp);
+         sleep(5);
+    }
+}
+
+
 
 
 
